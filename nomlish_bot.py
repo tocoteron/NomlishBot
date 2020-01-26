@@ -46,14 +46,15 @@ def TranslateTweets(original_tweets):
     url = "https://racing-lagoon.info/nomu/translate.php"
 
     options = Options()
-    options.set_headless()
+    options.headless = True
     browser = webdriver.Firefox(options=options)
     '''
     browser = webdriver.Firefox()
     '''
+
     browser.get(url)
 
-    print("Staeted translation")
+    print("Started translation")
 
     for tweet in original_tweets:
 
